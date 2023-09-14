@@ -14,13 +14,13 @@ export const Footer = () => {
 				<div className="grid grid-cols-3 items-center ">
 
 					<div className="flex justify-start space-x-4">
-						<Link href="https://www.facebook.com">
+						<Link href="https://www.linkedin.com/in/emander-dangla-23a1b2a9/">
 							<i className="fa fa-linkedin" aria-hidden="true"></i>
 						</Link>
-						<Link href="https://www.twitter.com">
+						<Link href="https://github.com/DerDangla">
 							<i className="fa fa-github" aria-hidden="true"></i>
 						</Link>
-						<Link href="https://www.instagram.com">
+						<Link href="https://www.instagram.com/_em.an.der.0/">
 							<i className="fa fa-instagram" aria-hidden="true"></i>
 						</Link>
 					</div>
