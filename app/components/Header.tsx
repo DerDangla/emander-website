@@ -32,10 +32,10 @@ function ElevationScroll(props: Props) {
   
     return React.cloneElement(children, {
       style: {
-        backgroundColor: trigger ? "rgba(11, 10, 10, 0.8)" : "#f5eae0",
+        backgroundColor: trigger ? "rgba(11, 10, 10, 0.8)" : "rgba(245, 234, 224, 0)",
         color: trigger ? "#FAF5F0" : "#413B3A",
         transition: trigger ? "0.7s" : "0.7s",
-        borderBottom: trigger ? "none" : "1px solid #E6CBB2",
+        //borderBottom: trigger ? "none" : "1px solid #E6CBB2",
       },
       elevation: trigger ? 4 : 0,
     });
@@ -94,7 +94,7 @@ export function Header(props: Props) {
           <Typography
             variant="h4"
             component="div"
-            sx={{ flexGrow: 1, ml:5, my:3, display: { xs: 'none', sm: 'block' } }}
+            sx={{ flexGrow: 1, ml:5, my:3, display: { xs: 'none', sm: 'block'} }}
           >
             Emander Dangla
           </Typography>

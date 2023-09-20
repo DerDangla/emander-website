@@ -19,24 +19,34 @@ import * as React from 'react';
       <h2 className={`mb-0 text-2xl font-semibold border-2 border-rose-800`}>
           Docsss{' '}
         </h2>
-
+      
+      <div className="mb-6 grid text-center lg:max-w-full lg:w-full lg:mt-0 lg:text-left md:mt-10 sm:mt-10">
+        <Image
+          className="md:mx-auto md:block lg:float-center relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+          src="/home-wallpaper.jpg"
+          alt="Emander Photo"
+          width={2900}
+          height={100}
+          style={{objectFit: "contain"}}
+          priority
+        />
+      </div>
+      <h1 className="animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-5xl text-white font-bold">Hello World</h1>
 */
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-20">
+    <main className="flex min-h-screen flex-col items-center justify-between p-0 ">
       
-      <div className="mb-6 grid text-center lg:max-w-7xl lg:w-full lg:mt-10 lg:grid-cols-3 lg:text-left md:mt-10 sm:mt-10">
-        <Image
-          className="col-span-2 md:mx-auto md:block md:col-span-2 lg:mx-0 lg:float-left lg:col-span-1 relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/emander-photo.jpg"
-          alt="Emander Photo"
-          width={600}
-          height={600}
-          priority
-        />
-        <div className={`col-span-2 mt-2 lg:mt-0 lg:ml-10 md:mt-2 md:ml-0`}>
+      <div className="mb-6 grid h-[calc(100vh-106px)] p-16 text-center lg:text-left bg-[url('/home-wallpaper.jpg')] bg-center bg-fixed bg-cover w-full ">
+        <div className="mb-3 p-20 pt-72 text-5xl text-white border-2 border-rose-800">
+          <p>Hello, I am</p>
+          <p className="mt-3">Emander Dangla</p>
+        </div>
+      </div>
+      
+      <div className={`col-span-2 mt-2 lg:mt-0 lg:ml-10 md:mt-2 md:ml-0`}>
           <h1 className={`mb-3 text-4xl font-semibold`}> Hi There !</h1>
-          <p className="mb-3 text-lg">
+          <p className="mb-3 text-lg ">
           My name is Emander, I am working towards completing a post-secondary degree in Artificial Intelligence - Software Engineering and have over 6 years of hands-on experience in software development and application support. I am passionate
           about AI and Web Development.  I am planning to develop a business that will make a long lasting positive impact to our society.
           </p>
@@ -47,8 +57,11 @@ export default function Home() {
             <li>Studying for ITIL 4 Foundation certification</li>
             <li>Looking for interesting and impactful work related to Application Support or AI (please reach out)</li>
           </ul>
+          <p className="mt-5 text-lg ">
+          Check out my resume
+          </p>
         </div>
-      </div>
+
       <div className="mb-4 grid text-center lg:max-w-7xl lg:w-full lg:mt-14 lg:grid-cols-1 lg:text-left md:mt-10 sm:mt-10">
         <h1 className={`mb-0 text-4xl font-semibold`}> Experience</h1>
       </div>

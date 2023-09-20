@@ -8,13 +8,23 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      keyframes: {
+        typing: {
+          '0%': { width: '0' },
+          '50%': { width: '100%' },
+          '100%': { width: '0' }
+        },
+        'blink-caret': {
+          '0%, 100%': { borderColor: 'transparent' },
+          '50%': { borderColor: 'black' }
+        }
       },
-    },
+      animation: {
+        typing: 'typing 8s steps(50, end) infinite',
+        'blink-caret': 'blink-caret 1s step-end infinite'
+      }
+    }
   },
-  plugins: [],
+  plugins: [ ],
 }
 export default config
