@@ -1,7 +1,18 @@
+'use client'
 import Image from 'next/image';
+//import Typewriter from 'typewriter-effect';
 import * as React from 'react';
+import { Typewriter } from 'react-simple-typewriter'
 
-/*
+/*import dynamic from 'next/dynamic';
+
+const Typewriter = dynamic(
+  () => import("typewriter-effect"),
+  {
+      ssr: false
+  }
+)
+
 
       <div className=" border-2 border-rose-800 relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial 
       before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic 
@@ -36,11 +47,20 @@ import * as React from 'react';
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-0 ">
-      
-      <div className="mb-6 grid h-[calc(100vh-106px)] p-16 text-center lg:text-left bg-[url('/home-wallpaper.jpg')] bg-center bg-fixed bg-cover w-full ">
-        <div className="mb-3 p-20 pt-72 text-5xl text-white border-2 border-rose-800">
-          <p>Hello, I am</p>
-          <p className="mt-3">Emander Dangla</p>
+      <div className="mb-6 grid h-[calc(100vh-106px)] p-16 text-center bg-[url('/home-wallpaper.jpg')] bg-center bg-fixed bg-cover w-full ">
+        <div className="flex mb-3 text-5xl lg:text-left items-center text-white border-2 border-rose-800">
+          <div className="mb-3 border-2 border-rose-800">Hello, I am</div>
+          <div className="mb-3 border-2 border-rose-800">
+          <Typewriter
+              words={['Emander Dangla', 'a Software Engineer', 'an Artificial Intelligence and Entrepreneur Student', 'a Freediver and Sunset Lover']}
+              loop={0}
+              cursor
+              cursorStyle='|'
+              typeSpeed={70}
+              deleteSpeed={20}
+              delaySpeed={1000}
+             />
+          </div>
         </div>
       </div>
       
