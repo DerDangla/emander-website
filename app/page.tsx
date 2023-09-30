@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image';
 import * as React from 'react';
+import Link from 'next/link';
 import { Typewriter } from 'react-simple-typewriter'
 
 /*
@@ -38,14 +39,14 @@ import { Typewriter } from 'react-simple-typewriter'
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-0 ">
-      <div className="mb-6 grid h-[calc(100vh-106px)] p-16 text-center items-center bg-[url('/home-wallpaper.jpg')] bg-center bg-fixed bg-cover w-full ">
-        <div className="mb-3 lg:px-5 text-5xl lg:text-left text-white">
+      <div className="grid h-[calc(100vh-106px)] lg:p-16 text-center items-center bg-[url('/home-wallpaper.jpg')] bg-center bg-fixed bg-cover w-full ">
+        <div className="mt-24 lg:px-5 text-5xl lg:text-left text-white">
           <p className="mb-3">Hello, I am</p>
           <Typewriter
               words={['Emander Dangla', 'a Software Engineer', 'an Artificial Intelligence and Entrepreneur Student', 'a Freediver and Sunset Lover']}
               loop={0}
               cursor
-              cursorStyle='|'
+              cursorStyle='_'
               typeSpeed={70}
               deleteSpeed={20}
               delaySpeed={1000}
@@ -53,14 +54,15 @@ export default function Home() {
         </div>
       </div>
       
-      <div className={`col-span-2 mt-2 lg:mt-0 lg:ml-10 md:mt-2 md:ml-0`}>
-          <h1 className={`mb-3 text-4xl font-semibold`}> Hi There !</h1>
-          <p className="mb-3 text-lg ">
+      <div className="flex flex-row gap-2 m-6 mx-16">
+        <div className="basis-3/4">
+          <h1 className="text-4xl font-semibold"> Hi There !</h1>
+          <p className="mt-3 text-lg ">
           My name is Emander, I am working towards completing a post-secondary degree in Artificial Intelligence - Software Engineering and have over 6 years of hands-on experience in software development and application support. I am passionate
           about AI and Web Development.  I am planning to develop a business that will make a long lasting positive impact to our society.
           </p>
           <p className="mt-5"> Currently, I am:</p>
-          <ul className="mt-3 list-disc list-inside">
+          <ul className="mt-2 list-disc list-inside">
             <li>an AI post-graduate student</li>
             <li>Developing Machine Learning projects for my portfolio</li>
             <li>Studying for ITIL 4 Foundation certification</li>
@@ -70,6 +72,34 @@ export default function Home() {
           Check out my resume
           </p>
         </div>
+        <div className="basis-1/4 grid-rows-2">
+          <div className="grid-rows-2 ">
+            <h1 className="text-2xl font-semibold"> Skills:</h1>
+            <div className="grid grid-rows-2 justify-center">
+              <div className="flex">
+                <img src="/Python-logo.png" alt="React Logo" className="h-32 p-6"/>
+                <img src="/nodejs-logo.png" alt="React Logo" className="h-32 p-6"/>
+              </div>
+              <div className="flex">
+                <img src="/reactjs-logo.png" alt="React Logo" className="h-32 p-6"/>
+                <img src="/nextjs-logo.png" alt="React Logo" className="h-32 p-6"/>
+              </div>
+            </div>
+          </div>
+          <div className="flex">
+            <h1 className="my-auto text-2xl font-semibold"> Socials:</h1>
+            <Link href="https://www.linkedin.com/in/emander-dangla-23a1b2a9/" className="my-auto px-6 text-3xl">
+              <i className="fa fa-linkedin" aria-hidden="true"></i>
+            </Link>
+            <Link href="https://github.com/DerDangla" className="my-auto px-6 text-3xl">
+							<i className="fa fa-github m-auto" aria-hidden="true"></i>
+						</Link>
+						<Link href="https://www.instagram.com/_em.an.der.0/" className="my-auto px-6 text-3xl">
+							<i className="fa fa-instagram" aria-hidden="true"></i>
+						</Link>
+          </div>
+        </div>
+      </div>
 
       <div className="mb-4 grid text-center lg:max-w-7xl lg:w-full lg:mt-14 lg:grid-cols-1 lg:text-left md:mt-10 sm:mt-10">
         <h1 className={`mb-0 text-4xl font-semibold`}> Experience</h1>
